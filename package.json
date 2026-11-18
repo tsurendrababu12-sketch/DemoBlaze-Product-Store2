@@ -1,0 +1,19 @@
+{
+  "name": "demoblaze-automation",
+  "version": "1.0.0",
+  "description": "Playwright end-to-end automation for the DemoBlaze product store",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --config=playwright.live.config.ts --headed",
+    "test:live": "playwright test --config=playwright.live.config.ts --headed",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}
