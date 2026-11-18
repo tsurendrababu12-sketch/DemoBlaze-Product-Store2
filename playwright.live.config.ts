@@ -6,7 +6,7 @@ export default defineConfig({
   testMatch: 'live-demo.spec.ts',
   fullyParallel: false,
   timeout: 120_000,
-  retries: 0,
+  retries: 3,
   workers: 1,
   use: {
     ...baseConfig.use,

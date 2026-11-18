@@ -29,7 +29,7 @@ Run `npm run typecheck` to validate TypeScript types without emitting files.
 
 The suite targets Chromium and runs against the live DemoBlaze site. It uses a fresh browser context for each test, so cart state is not intentionally shared. Since the site is an external demo service, availability and backend behavior can affect results.
 
-Use `npm run test:live` or `npm run test:headed` to watch the store journey in one headed Chromium window and page. The guided flow browses to Laptops, adds only the middle first-row product (`Sony vaio i7`), verifies it is the only cart item, and checks out; it does not add the Samsung phone or perform login. The live configuration runs a single guided test, disables retries to avoid relaunching the browser, and applies a 3-second slow-motion delay to browser actions (including clicks); Chromium closes after the flow finishes. The regular `npm test` run keeps its five tests isolated, retries failures up to 3 times, and has no slow-motion delay.
+Use `npm run test:live` or `npm run test:headed` to watch the store journey in one headed Chromium window and page. The guided flow browses to Laptops, adds only the middle first-row product (`Sony vaio i7`), verifies it is the only cart item, and checks out; it does not add the Samsung phone or perform login. The live configuration runs a single guided test, retries failures up to 3 times, and applies a 3-second slow-motion delay to browser actions (including clicks); Chromium closes after the flow finishes. The regular `npm test` run keeps its five tests isolated, retries failures up to 3 times, and has no slow-motion delay.
 
 ## Coverage
 
