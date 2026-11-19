@@ -44,7 +44,7 @@ Use `npm run test:live` or `npm run test:headed` to watch the store journey in o
 - `pages/store-pages.ts` contains small Page Objects for catalog, product, and cart interactions. Tests keep business assertions visible in the spec.
 - Locators prefer accessible roles and names, with stable IDs for site controls that do not expose reliable accessible names.
 - Assertions and Playwright's locator/action waiting replace fixed sleeps; no `waitForTimeout()` is used.
-- The regular test suite retries failures up to **3 times** in both local and CI runs. Traces are collected on the first retry and screenshots on failure. The guided live demo disables retries so a failing live run does not relaunch Chromium.
+- The regular test suite and guided live demo retry failures up to **3 times**. Traces are collected on the first retry and screenshots on failure. A failing guided live run can relaunch Chromium during retries.
 - The checkout test uses clearly fictitious order details. The login test uses a timestamped username so it does not depend on or create an account.
 
 ## Interview walkthrough
